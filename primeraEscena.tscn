@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bkhchgxgdt31d"]
+
+[ext_resource type="Texture2D" uid="uid://bbde5lr2pu0ru" path="res://spritesPlataforma/plataformaNube.png" id="1_e223v"]
+[ext_resource type="Texture2D" uid="uid://c0kid0lh7kl6e" path="res://spritesPersonajes/Pink_Monster.png" id="2_pu014"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlrib"]
+size = Vector2(687, 54.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6a5nv"]
+radius = 18.0
+height = 50.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12syq"]
+size = Vector2(462.25, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adk2t"]
+size = Vector2(463.5, 47)
+
+[node name="Node2D" type="Node2D" unique_id=664335806]
+position = Vector2(-3, -29)
+metadata/_edit_lock_ = true
+
+[node name="PlatNube1" type="StaticBody2D" parent="." unique_id=1008992894]
+top_level = true
+position = Vector2(-195, -34)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatNube1" unique_id=1759677932]
+position = Vector2(195, 63)
+scale = Vector2(0.47111043, 0.19358309)
+texture = ExtResource("1_e223v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatNube1" unique_id=2066933537]
+position = Vector2(194, 61)
+shape = SubResource("RectangleShape2D_rlrib")
+
+[node name="Personaje" type="CharacterBody2D" parent="." unique_id=766938141]
+position = Vector2(-8, 9)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Personaje" unique_id=1763034589]
+position = Vector2(-244, -16)
+scale = Vector2(1.875, 1.8125)
+texture = ExtResource("2_pu014")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personaje" unique_id=1141214306]
+position = Vector2(-246, -10)
+shape = SubResource("CapsuleShape2D_6a5nv")
+metadata/_edit_group_ = true
+
+[node name="PlatNube2" type="StaticBody2D" parent="." unique_id=1482291766]
+position = Vector2(566, -230)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatNube2" unique_id=305933003]
+position = Vector2(193.37497, 65)
+scale = Vector2(0.31834835, 0.19358309)
+texture = ExtResource("1_e223v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatNube2" unique_id=67974328]
+position = Vector2(192, 57)
+shape = SubResource("RectangleShape2D_12syq")
+metadata/_edit_group_ = true
+
+[node name="PlatNube3" type="StaticBody2D" parent="." unique_id=179250980]
+position = Vector2(-696, 336)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatNube3" unique_id=207923168]
+position = Vector2(2, -488)
+scale = Vector2(0.31834835, 0.19358309)
+texture = ExtResource("1_e223v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatNube3" unique_id=1712192838]
+position = Vector2(0.25, -494)
+shape = SubResource("RectangleShape2D_adk2t")
